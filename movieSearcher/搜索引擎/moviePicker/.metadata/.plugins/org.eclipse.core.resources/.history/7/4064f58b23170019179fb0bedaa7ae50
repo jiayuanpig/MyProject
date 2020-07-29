@@ -1,0 +1,93 @@
+package ccnu.commen.index;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.index.IndexWriter;
+
+public class CreateIndex2 {
+
+	public static void main(String[] args) {
+		String indexPath = "D:/pac/index/";
+
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+
+		try {
+
+			IndexWriter writer = new IndexWriter("K:\\pac\\index\\", new StandardAnalyzer(), true);
+			// 索引存放地址，分析器，IndexWriter 不管目录内是否已经有索引了，一律清空，重新建立
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/search?user=root&password=root");
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("select * from inf order by id");
+			while (rs.next()) {
+				System.out.println(rs.getRow());
+				Document doc = new Document();
+				String title = rs.getString("title");
+				if (title == null) {
+					title = "此处为空值！";
+				}
+				String path = "F:\\index\\" + rs.getInt("id") + ".txt";
+				String id = Integer.toString(rs.getInt("id"));
+				String channelid = Integer.toString(rs.getInt("channelid"));
+				Field idFld = new Field("id", id, Field.Store.YES, Field.Index.NO);
+				Field channelidFld = new Field("channelid", channelid, Field.Store.YES, Field.Index.UN_TOKENIZED);
+				Field titleFld = new Field("title", title, Field.Store.YES, Field.Index.TOKENIZED);
+				Field textFld = new Field("text", rs.getString("text"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field ptimeFld = new Field("ptime", rs.getString("ptime"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field sourceFld = new Field("source", rs.getString("source"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field writerFld = new Field("writer", rs.getString("writer"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field urlFld = new Field("url", rs.getString("url"), Field.Store.YES, Field.Index.NO);
+				// Index.NO 不需要索引；Index.TOKENIZED
+				// 先被分词再被索引；Index.UN_TOKENIZED被索引但不会被分词
+				doc.add(idFld);
+				doc.add(channelidFld);
+				doc.add(titleFld);
+				doc.add(textFld);
+				doc.add(ptimeFld);
+				doc.add(sourceFld);
+				doc.add(writerFld);
+				doc.add(urlFld);
+				writer.addDocument(doc);
+			}
+			writer.optimize();// 对索引进行优化
+			writer.close();// 关闭写入流对象并将索引写入目录
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+					rs = null;
+				}
+				if (stmt != null) {
+					stmt.close();
+					stmt = null;
+				}
+				if (conn != null) {
+					conn.close();
+					conn = null;
+				}
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			}
+		}
+
+	}
+}

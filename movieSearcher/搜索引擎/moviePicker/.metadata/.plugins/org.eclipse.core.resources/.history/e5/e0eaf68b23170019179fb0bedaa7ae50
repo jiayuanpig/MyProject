@@ -1,0 +1,80 @@
+package ccnu.commen.index;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.index.IndexWriter;
+
+import ccnu.commen.Spider.ConnectDB;
+
+public class CreateIndex {
+
+	String indexPath = "D:/pac/index/";
+	ResultSet rs = null;
+	
+	public void createIndex() {
+		try {
+			IndexWriter writer = new IndexWriter(indexPath, new StandardAnalyzer(), true);
+			// 索引存放地址,分析器,IndexWriter 不管目录内是否已经有索引了,一律清空,重新建立
+			
+			//连接数据库,获取结果
+			ConnectDB connect = new ConnectDB();
+			rs = connect.excuteQuery("select * from inf order by id");
+			//便历结果
+			while (rs.next()) {
+				System.out.println(rs.getRow());
+				Document doc = new Document();
+				String title = rs.getString("title");
+				if (title == null) {
+					title = "null";
+				}
+				
+				String id = Integer.toString(rs.getInt("id"));
+				String channelid = Integer.toString(rs.getInt("channelid"));
+				
+				//创建索引
+				Field idFld = new Field("id", id, Field.Store.YES, Field.Index.NO);
+				Field channelidFld = new Field("channelid", channelid, Field.Store.YES, Field.Index.UN_TOKENIZED);
+				Field titleFld = new Field("title", title, Field.Store.YES, Field.Index.TOKENIZED);
+				Field textFld = new Field("text", rs.getString("text"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field ptimeFld = new Field("ptime", rs.getString("ptime"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field sourceFld = new Field("source", rs.getString("source"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field writerFld = new Field("writer", rs.getString("writer"), Field.Store.YES, Field.Index.TOKENIZED);
+				Field urlFld = new Field("url", rs.getString("url"), Field.Store.YES, Field.Index.NO);
+				// Index.NO 不需要索引；Index.TOKENIZED
+				// 先被分词再被索引；Index.UN_TOKENIZED被索引但不会被分词
+				doc.add(idFld);
+				doc.add(channelidFld);
+				doc.add(titleFld);
+				doc.add(textFld);
+				doc.add(ptimeFld);
+				doc.add(sourceFld);
+				doc.add(writerFld);
+				doc.add(urlFld);
+				writer.addDocument(doc);
+			}
+			writer.optimize();// 对索引进行优化
+			writer.close();// 关闭写入流对象并将索引写入目录
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+					rs = null;
+				}
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			}
+		}
+
+		
+	}
+	
+	
+}

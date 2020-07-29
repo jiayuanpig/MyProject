@@ -1,0 +1,128 @@
+package ccnu.commen.Spider;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import ccnu.entity.News;
+import ccnu.entity.Type;
+
+/**
+ * 编辑数据:
+ * 	打印HTML信息
+ * 	将信息保存到数据库
+ * @author ADMIN-JY
+ *
+ */
+public class EditData {
+	
+	String URL = "https://movie.douban.com/review/best/";//初始链接
+	News news = new News();
+	String sql;
+	
+	public void saveType() {
+		ConnectDB connect = new ConnectDB();
+		RetrivePage retrivePage = new RetrivePage();
+		retrivePage.setURL(this.URL);
+		Document doc = retrivePage.getDoc();
+		//保存新闻类型
+		Element typeList = doc.select("[class='news-nav area']").get(0);
+		Elements types = typeList.children().get(0).children();
+		int i = 1;
+		for(Element e:types) {
+			Type type = new Type();
+			type.setTypeName(e.text());
+			type.setTypeUrl(e.child(0).attr("href"));
+			type.setState(i+"");
+			i++;
+			sql = "insert into type values('"
+					+type.getId()+"','"
+					+type.getTypeName()+"','"
+					+type.getState()+"')";
+			System.out.println(sql);
+			connect.excuteUpdate(sql);
+		}
+		connect.closeAll();
+	}
+	
+	public void saveNews() throws SQLException {
+		ConnectDB connect = new ConnectDB();
+		//查询所有类型并获取对应网址
+		sql = "select * from type where 1=1";
+		ResultSet resultSet = connect.excuteQuery(sql);
+		//遍历每个类型
+		while (resultSet.next()) {
+			String state = resultSet.getString("state");
+			String url = resultSet.getString("typeurl");
+			//每个类型根据网址查找新闻
+			RetrivePage retrivePage = new RetrivePage();
+			retrivePage.setURL(url);
+			Document doc = retrivePage.getDoc();
+			//找到新闻信息
+			Element typeList = doc.select("[class='news-nav area']")
+			
+		}
+
+		
+		
+		
+		RetrivePage retrivePage = new RetrivePage();
+		retrivePage.setURL(this.URL);
+		Document doc = retrivePage.getDoc();
+		//保存新闻信息
+		
+		
+		
+		
+		connect.closeAll();
+	}
+	
+	public static void main(String[] args) {
+		new EditData().saveNews();
+	}
+	
+	
+	
+	
+	
+	
+	
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//打印新闻信息
+//	public void print(Element li) {
+//		System.out.println("**********************************************");
+//		span = li.getElementsByTag("span").get(0);
+//		date = span.text();
+//		System.out.println("日期:"+ date);
+//		Element a = li.getElementsByTag("a").get(0);
+//		newsTitle = a.text();
+//		System.out.println("标题:"+ newsTitle);
+//		newsHref = a.attr("href");
+//		System.out.println("链接:"+ newsHref);
+//	}
+	
+	//将新闻信息保存至数据库
+//	public void save(Element li) {
+//		Element a = li.getElementsByTag("a").get(0);
+//		date = span.text();
+//		newsTitle = a.text();
+//		newsHref = a.attr("href");
+//		sql = "insert into news values('"+date+"','"+newsTitle+"','"+newsHref+"')";
+//		connect.excuteUpdate(sql);//在excuteUpdate方法中自动连接数据库和关闭相关连接
+//	}
+	
+	
+

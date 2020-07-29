@@ -1,0 +1,77 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+<title>简单检索页</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+</head>
+<script type="text/javascript" language="javascript">
+	var request = false;
+	try {
+		request = new XMLHttpRequest();
+	} catch (trymicrosoft) {
+		try {
+			request = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (othermicrosoft) {
+			try {
+				request = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (failed) {
+				request = false;
+			}
+		}
+	}
+
+	if (!request)
+		alert("Error initializing XMLHttpRequest!");
+	
+	<%
+		String information = request.getAttribute("information");         // 获取错误属性
+		if(information != null) {
+	%>
+		alert("<%=information%>");                                            // 弹出错误信息
+		window.location.href='index.jsp' ;                            // 跳转到登录界面
+	<%
+		}
+	%>
+	
+	
+</script>
+
+	
+
+<body background="3.jpg">
+	<center>
+		<div style="height: 400px; width: 800px;">
+			<div style="height: 80px; width: 800px;"></div>
+			&nbsp;
+			<div style="height: 120px; width: 800px;color:red;font-size:30px">环球国际新闻搜索引擎</div>
+			&nbsp;
+			<form action="SimpleSearchServlet" method="post">
+				<input type="text" name="txt" id="txt" value="请输入您要检索的检索词" onclick="this.value=''"
+					style="height: 30px; width: 500px"> <input type="submit"
+					value="搜索" style="height: 30px; width: 80px">
+			</form>
+			<div style="height: 100px; width: 800px; border: 1px;">
+				<a href="jiansuo.jsp"
+					style="font-family: 楷体; color: #000000; text-decoration: none;">高级检索</a>
+			</div>
+			
+		</div>
+		&nbsp;
+	</center>
+</body>
+</html>

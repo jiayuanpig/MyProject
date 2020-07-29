@@ -1,0 +1,13 @@
+package ccnu.entity;
+
+public class Movie {
+	//id,标题,状态,日期,链接
+	private String id;
+	private String title;
+	private String state;
+	private String date;
+	private String url;
+	
+	
+	
+}
