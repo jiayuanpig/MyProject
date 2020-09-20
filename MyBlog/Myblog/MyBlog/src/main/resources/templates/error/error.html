@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+</head>
+<body>
+<h1>发生错误</h1>
+
+<div>
+    <!-- 移除所有标签体，以文本形式输出，在网页源代码中可以查看报错信息   -->
+    <div th:utext="'&lt;!--'" th:remove="tag"></div>
+    <div th:utext="'Failed Request URL:'+${url}" th:remove="tag"></div>
+    <div th:utext="'Exception Massage:'+${exception.message}" th:remove="tag"></div>
+    <ul th:remove="tag">
+        <li th:each="string:${exception.stackTrace}" th:remove="tag">
+            <span th:utext="${string}" th:remove="tag"></span>
+        </li>
+    </ul>
+    <div th:utext="'--&gt;'" th:remove="tag"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+#开发者环境
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?userUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    com.zjy.myblog: debug
+  file:
+    name: blog-dev.log
+    path: log/
+  config: classpath:logback-spring.xml
+
+server:
+  port: 8080

@@ -1,0 +1,8 @@
+#公共配置
+spring:
+  thymeleaf:
+    mode: HTML
+  #指定当前活跃配置
+  profiles:
+    active: dev
+

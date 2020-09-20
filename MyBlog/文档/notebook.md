@@ -102,25 +102,52 @@ http://naotu.baidu.com/file/74bf1d5a0d6d610aeaaa60c9702ee0d4?token=f43ff61904292
 
 ## 3、后台框架搭建
 
+### 配置环境
+
+配置数据库连接、日志、配置活跃
 
 
 
+遇到的问题：
+
+数据库时区设置 serverTimezone=UTC 
+
+yml数据库配置：
+
+```yml
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?userUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    #注意不能是data-username
+    username: root
+    password: 123456
+```
 
 
 
+### 异常处理
+
+1. 定义错误页面
+2. 全局处理异常
 
 
 
+### 日志处理
+
+记录日志内容
+
+记录日志类
 
 
 
+### 页面处理
 
+导出静态页面
 
+使用thymeleaf布局
 
-
-
-
-
+错误页面美化
 
 
 
