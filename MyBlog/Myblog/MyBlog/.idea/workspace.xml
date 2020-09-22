@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../文档/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../文档/notebook.md" afterDir="false" />
-    </list>
+    <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +89,7 @@
       <workItem from="1600512245876" duration="1028000" />
       <workItem from="1600560523070" duration="7319000" />
       <workItem from="1600572045208" duration="1860000" />
+      <workItem from="1600700362769" duration="16000" />
     </task>
     <servers />
   </component>
