@@ -86,20 +86,21 @@
     right: 1em;
 }
 
-/*手机大小隐藏*/
+/*手机视图隐藏元素*/
 @media screen and (max-width: 768px){
     .m-mobile-hide{
         display: none !important;
-    }
-    .m-mobile-show{
-        display: block !important;
     }
 }
 
 .m-mobile-show{
     display: none !important;
 }
-
+@media screen and (max-width: 768px){
+    .m-mobile-show{
+        display: block !important;
+    }
+}
 
 
 
