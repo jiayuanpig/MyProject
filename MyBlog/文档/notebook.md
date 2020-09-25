@@ -90,7 +90,9 @@ http://naotu.baidu.com/file/74bf1d5a0d6d610aeaaa60c9702ee0d4?token=f43ff61904292
 
 ### 页面开发（前端开发）
 
-
+- 前台页面开发
+- 后台管理页面开发
+- 添加Markdown组件
 
 
 

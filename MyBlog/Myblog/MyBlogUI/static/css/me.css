@@ -1,4 +1,5 @@
-/*顶部高度(最小)*/
+/*一、控制间距*/
+/*内部间距*/
 .m-padded-tb-mini{
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
@@ -19,15 +20,30 @@
     padding-top: 4em !important;
     padding-bottom: 4em !important;
 }
-/*底部高度(最大)*/
 .m-padded-tb-massive{
     padding-top: 5em !important;
     padding-bottom: 5em !important;
 }
-
 .m-padded-mini{
     padding: 0.3em !important;
 }
+
+.m-padded-lr{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+
+/*外部间距*/
+/*控制外部间距*/
+.m-margin-tb-tiny{
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+.m-margin-top{
+    margin-top: 3em !important;
+}
+
+
 
 
 
@@ -52,6 +68,9 @@
 .m-opacity-mini{
     opacity: 0.8 !important;
 }
+.m-opacity-tiny{
+    opacity: 0.6 !important;
+}
 
 /*display*/
 .m-inline-block{
@@ -62,16 +81,6 @@
     margin: auto !important;
 }
 
-
-/*控制外部间距*/
-.m-margin-tb-tiny{
-    margin-top: 0.5em !important;
-    margin-bottom: 0.5em !important;
-}
-
-.m-margin-top{
-    margin-top: 3em !important;
-}
 
 
 /*自定义颜色*/
@@ -102,6 +111,10 @@
     }
 }
 
-
-
+/*阴影效果*/
+.m-shadow-small{
+    /*兼容浏览器*/
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
 
