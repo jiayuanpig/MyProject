@@ -27,7 +27,9 @@
 .m-padded-mini{
     padding: 0.3em !important;
 }
-
+.m-padded{
+    padding: 1em !important;
+}
 .m-padded-lr{
     padding-left: 4em !important;
     padding-right: 4em !important;
@@ -118,3 +120,10 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }
 
+/*position*/
+.m-position-fixed .ui{
+    position: fixed !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    z-index: 1 !important;
+}

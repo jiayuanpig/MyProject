@@ -92,7 +92,15 @@ http://naotu.baidu.com/file/74bf1d5a0d6d610aeaaa60c9702ee0d4?token=f43ff61904292
 
 - 前台页面开发
 - 后台管理页面开发
-- 添加Markdown组件
+- 插件集成
+  - Markdown编辑器：Editor.md
+  - 内容排版：typo.css
+  - 动画效果：animate.css
+  - 代码高亮：prismjs.css
+  - ~~滚动侦测waypoints~~
+  - ~~平滑滚动jquery.scrollTo~~
+  - 目录生成：Tocbot
+  - 二维码生成：qrcode.js
 
 
 

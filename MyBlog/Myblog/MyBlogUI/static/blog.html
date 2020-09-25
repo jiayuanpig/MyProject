@@ -9,6 +9,16 @@
     <!--引入自定义样式-->
     <link rel="stylesheet" href="./css/me.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!--引入内容排版插件typo.css-->
+    <link rel="stylesheet" href="lib/typo.css-master/typo.css">
+    <!--引入动画效果animate.css-->
+    <link rel="stylesheet" href="lib/animate.css/css/animate.min.css">
+    <!--引入代码高亮-->
+    <link rel="stylesheet" href="lib/prismjs/prism.css">
+    <!--引入目录插件-->
+    <link rel="stylesheet" href="lib/tocbot-4.12.0/dist/tocbot.min.js">
+
+
     <title>博客详情</title>
 </head>
 <body>
@@ -41,9 +51,9 @@
     </a>
 </nav>
 
-<!--中间内容：左边放博客列表，右边放博客标签-->
+<!--中间内容-->
 <div class="m-padded-tb-big m-container">
-    <div class="ui container">
+    <div class="ui container fadeIn a-time1">
         <!--头部-->
         <div class="ui top attached segment">
             <div class="ui horizontal link list">
@@ -71,11 +81,37 @@
             </div>
             <h2 class="ui header center aligned">我的第一篇博客</h2>
             <br>
-            <div id="content" class="m-padded-lr">
-                <h2>标题一</h2>
-                <p>我是内容1</p>
-                <h2>标题二</h2>
-                <p>我是内容2</p>
+            <!--博客内容-->
+            <div id="content" class="m-padded-lr typo typo-selection js-toc-content">
+                <h1 id="item-1">1、终身性</h1>
+                <h2 id="item-1-1">终身性说明1</h2>
+                <h3 id="item-1-1-1">终身性说明1-1</h3>
+                <h2 id="item-1-2">终身性说明2</h2>
+                <p>这是终身教育最大的特征。它突破了正规学校的框架，把教育看成是个人一生中连续不断的学习过程，是人们在一生中所受到的各种培养的总和，实现了从学前期到老年期的整个教育过程的统一。既包括正规教育，又包括非正规教育。它包括了教育体系的各个阶段和各种形式。</p>
+                <h1 id="item-2">2、全民性</h1>
+                <h2 id="item-2-1">全民性说明</h2>
+                <p>终身教育的全民性，是指接受终身教育的人包括所有的人，无论男女老幼、贫富差别、种族性别。联合国教科文组织汉堡教育研究员达贝提出终身教育具有民主化的特色，反对教育知识为所谓的精英服务，是具有多种能力的一般民众能平等获得教育机会。而事实上，当今社会中的每一个人，都要学会生存，而要学会生存就离不开终身教育，因为生存发展是时代的主流，会生存必须会学习，这是现代社会给每个人提出的新课题。</p>
+                <h1 id="item-3">3、广泛性</h1>
+                <h2 id="item-3-1">广泛性说明</h2>
+                <p>终身教育既包括家庭教育、学校教育，也包括社会教育。可以这么说，它包括人的各个阶段，是一切时间、一切地点、一切场合和一切方面的教育。终身教育扩大了学习天地，为整个教育事业注入了新的活力。</p>
+                <h1 id="item-4">4、灵活与实用性</h1>
+                <h2 id="item-4-1">灵活与实用性说明</h2>
+                <p>现代终身具有灵活性，表现在任何需要学习的人，可以随时随地接受任何形式的教育。学习的时间、地点、内容、方式均由个人决定。人们可以根据自己的特点和需要选择最适合自己的学习。</p>
+
+
+                <!--我是代码-->
+                <pre>
+                    <code class="language-java">
+                        public class{
+                            private int i;
+                            public void say(){
+                                system.out.println("Hello,World");
+                            }
+                        }
+                    </code>
+                </pre>
+
+
             </div>
             <br>
             <div class="m-padded-lr">
@@ -117,7 +153,7 @@
             </div>
         </div>
         <!--评论区-->
-        <div class="ui bottom attached segment">
+        <div id="comment-container" class="ui bottom attached segment">
             <!--已有留言-->
             <div class="ui teal segment">
                 <div class="ui threaded comments">
@@ -270,17 +306,43 @@
     </div>
 </footer>
 
+<!--博客工具条-->
+<div style="position: fixed ;bottom: 0;right: 0;z-index: 1;padding: 1em">
+    <div class="ui vertical icon buttons">
+        <button type="button" class="ui button teal" id="index-toc">目录</button>
+        <a href="#comment-container" class="ui button teal">留言</a>
+        <button type="button" class="ui button icon"><i class="weixin icon"></i></button>
+        <a href="#" class="ui button"><i class="chevron up icon"></i></a>
+    </div>
+    <div class="ui flowing popup transition hidden toc-container" style="width: 200px">
+        <ol class="js-toc"></ol>
+    </div>
+</div>
+
+
+
 
 <!--引入jquery和semantic UI的js文件-->
 <script crossorigin="anonymous" integrity="sha384-LVoNJ6yst/aLxKvxwp6s2GAabqPczfWh6xzm38S/YtjUyZ+3aTKOnD/OJVGYLZDl"
         src="https://lib.baomitu.com/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-
+<script src="lib/prismjs/prism.js"></script>
+<script src="lib/tocbot-4.12.0/dist/tocbot.min.js"></script>
 
 <script>
     /*控制移动端按钮点击后出现目录*/
     $('.menu-toggle').click(function () {
         $('.menu-toggle-item').toggleClass('m-mobile-hide');
+    });
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
     });
 
     /*点击赞赏后显示二维码*/
@@ -288,6 +350,12 @@
         popup:$('.payQR.popup'),
         on:'click',
         position:'bottom center'
+    });
+    /*生成目录*/
+    $('#index-toc').popup({
+        popup:$('.toc-container.popup'),
+        on:'click',
+        position:'left center'
     });
 
 
