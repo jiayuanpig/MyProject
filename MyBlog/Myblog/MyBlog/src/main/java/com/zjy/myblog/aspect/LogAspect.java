@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class LogAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    //配置切面
+    //配置切面：web下的所有方法都会被增强，即添加日志
     @Pointcut("execution(* com.zjy.myblog.web.*.*(..))")
     public void log() {
 
@@ -33,8 +33,10 @@ public class LogAspect {
         String ip = request.getRemoteAddr();
         String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
+
         RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
 
+        System.out.println("日志输出："+requestLog);
         logger.info("Result:{}", requestLog);
     }
 
@@ -43,6 +45,7 @@ public class LogAspect {
         //无
     }
 
+    /*拦截被增强方法执行后的返回结果*/
     @AfterReturning(returning = "result", pointcut = "log()")
     public void doAfterReturn(Object result) {
         logger.info("Result:{}", result);

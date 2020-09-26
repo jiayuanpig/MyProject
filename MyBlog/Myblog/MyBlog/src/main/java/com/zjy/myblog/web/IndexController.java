@@ -7,18 +7,36 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("Myblog")
+//@RequestMapping("Myblog")
 public class IndexController {
 
-    @GetMapping("/")
-    public String index(){
-//        int i = 1/0;
-//        String blog = null;
-//        if(blog == null){
-//            throw new NotFoundException("博客不存在");
-//        }
-//        System.out.println("----index----");
-
+    @GetMapping("/index")
+    public String index() {
         return "index";
+    }
+
+    @GetMapping("/types")
+    public String types() {
+        return "types";
+    }
+
+    @GetMapping("/tags")
+    public String tags() {
+        return "tags";
+    }
+
+    @GetMapping("/archives")
+    public String archives() {
+        return "archives";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "test";
     }
 }

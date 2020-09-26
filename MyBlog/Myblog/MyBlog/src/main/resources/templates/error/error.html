@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <title>error</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/_fragments :: head(~{::title})">
+    <title>发生错误</title>
 </head>
 <body>
-<h1>发生错误</h1>
+<!--导航-->
+<nav th:replace="common/_fragments :: nav(0)"></nav>
 
-<div>
-    <!-- 移除所有标签体，以文本形式输出，在网页源代码中可以查看报错信息   -->
+<div class="m-container">
+    <div class="ui error message">
+        <div class="ui container">
+            <h2>发生错误！！！</h2>
+            <p></p>
+        </div>
+    </div>
+    <h1>发生错误！！！</h1>
+    <!-- 移除所有标签体，以文本形式输出，在网页源代码中以注释的形式查看报错信息   -->
     <div th:utext="'&lt;!--'" th:remove="tag"></div>
     <div th:utext="'Failed Request URL:'+${url}" th:remove="tag"></div>
     <div th:utext="'Exception Massage:'+${exception.message}" th:remove="tag"></div>
@@ -19,5 +26,14 @@
     </ul>
     <div th:utext="'--&gt;'" th:remove="tag"></div>
 </div>
+
+
+<!--底部-->
+<footer th:replace="common/_fragments :: footer"></footer>
+
+<!--/*/<th:block th:replace="common/_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
+
+
 </body>
 </html>

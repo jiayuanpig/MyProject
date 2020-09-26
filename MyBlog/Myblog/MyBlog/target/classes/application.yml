@@ -2,6 +2,10 @@
 spring:
   thymeleaf:
     mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
   #指定当前活跃配置
   profiles:
     active: dev

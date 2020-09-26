@@ -1,6 +1,8 @@
 /*背景图片*/
 body{
     background: url("../images/bg3.png");
+    height:100%;
+    /*overflow:hidden;*/
 }
 
 

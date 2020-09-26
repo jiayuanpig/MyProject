@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>测试</title>
-    <link rel="stylesheet" href="../static/lib/animate.css/css/animate.min.css"/>
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/_fragments :: head(~{::title})">
+    <title >测试</title>
 </head>
 
 <body>
-<div class="">
+<!--导航-->
+<nav th:replace="common/_fragments :: nav(0)"></nav>
 
-    <div class="fadeIn   a-time1 ">
-        <h2>sdhishdishdishd</h2>
-        <p class="">sdakdshsadfhfhsdf</p>
-    </div>
+<div>
+    我是body
 </div>
+
+
+<!--底部-->
+<footer th:replace="common/_fragments :: footer"></footer>
+
+<!--<th:block th:replace="common/_fragments :: script"></th:block>-->
+<!--另一种方式-->
+<!--/*/<th:block th:replace="common/_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
 
 
 </body>
