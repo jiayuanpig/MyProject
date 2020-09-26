@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/_fragments-bg :: head(~{::title})">
+    <title >后台测试</title>
+</head>
+
+<body>
+<!--导航-->
+<nav th:replace="common/_fragments-bg :: nav(0)"></nav>
+
+<div>
+    我是body
+</div>
+
+
+<!--底部-->
+<footer th:replace="common/_fragments-bg :: footer"></footer>
+
+<!--<th:block th:replace="common/_fragments-bg :: script"></th:block>-->
+<!--另一种方式-->
+<!--/*/<th:block th:replace="common/_fragments-bg :: script">/*/-->
+<!--/*/</th:block>/*/-->
+
+
+</body>
+</html>

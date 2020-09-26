@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/_fragments-bg :: head(~{::title})">
+    <title>后台管理-博客发布</title>
+</head>
+<body>
+<!--四个部分：nav,left,right,footer-->
+<!--导航-->
+<nav th:replace="common/_fragments-bg :: nav(0)"></nav>
+
+
+<!--中间内容-->
+<div class="ui container m-padded-tb-big">
+    <div class="ui success large message">
+        <h3>Hi,</h3>
+        <p>小咸鱼，欢迎登陆！</p>
+    </div>
+</div>
+
+
+<!--底部-->
+<footer th:replace="common/_fragments-bg :: footer"></footer>
+
+
+<!--/*/<th:block th:replace="common/_fragments-bg :: script">/*/-->
+<!--/*/</th:block>/*/-->
+
+<script>
+    /*控制移动端按钮点击后出现目录*/
+    $('.menu-toggle').click(function () {
+        $('.menu-toggle-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown();
+
+    $('.ui.form').form({
+        fields:{
+            title: {
+                identifier: 'title',
+                rules:[{
+                    type:'empty',
+                    prompt:'标题:请输入博客标题'
+                }]
+            }
+        }
+    });
+
+    /*使用markdown插件*/
+    var contentEditor;
+    $(function() {
+        contentEditor = editormd("md-content", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path: "../static/lib/editor.md/lib/"
+        });
+    });
+
+
+
+</script>
+
+
+</body>
+</html>
