@@ -97,12 +97,22 @@ http://naotu.baidu.com/file/74bf1d5a0d6d610aeaaa60c9702ee0d4?token=f43ff61904292
   - 内容排版：typo.css
   - 动画效果：animate.css
   - 代码高亮：prismjs.css
-  - ~~滚动侦测waypoints~~
-  - ~~平滑滚动jquery.scrollTo~~
+  - 滚动侦测：waypoints
+  - 平滑滚动：jquery.scrollTo
   - 目录生成：Tocbot
   - 二维码生成：qrcode.js
 
 
+
+### Semantic UI用法
+
+> 待填...
+>
+> 容器：布局
+>
+> 居中：上下居中、左右居中
+>
+> 组件：图标、按钮、导航条
 
 
 
@@ -153,7 +163,7 @@ spring:
 
 ### 页面处理
 
-导出静态页面
+导入静态页面
 
 使用thymeleaf布局
 
@@ -167,7 +177,9 @@ spring:
 
 
 
+# 待解决Bug
 
+博客详情页面工具栏滚动显示问题
 
 
 

@@ -2,9 +2,329 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--适应移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--引入semantic UI样式-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--引入自定义样式-->
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
     <title>首页</title>
 </head>
 <body>
-    <h1>我是首页</h1>
+<!--四个部分：nav,left,right,footer-->
+<!--导航：包括logo、导航页、搜索框-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary menu stackable">
+            <!--logo-->
+            <h2 class="ui header teal item">MyBlog</h2>
+            <!--导航页-->
+            <a href="#" class="active item m-mobile-hide menu-toggle-item"><i class="home icon"></i>首页</a>
+            <a href="#" class="item m-mobile-hide menu-toggle-item"><i class="idea icon"></i>分类</a>
+            <a href="#" class="item m-mobile-hide menu-toggle-item"><i class="tags icon"></i>标签</a>
+            <a href="#" class="item m-mobile-hide menu-toggle-item"><i class="clone icon"></i>归档</a>
+            <a href="#" class="item m-mobile-hide menu-toggle-item"><i class="info icon"></i>关于我</a>
+            <!--搜索框-->
+            <div class="right item">
+                <div class="ui icon input transparent inverted">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--移动端隐藏nav，出现按钮-->
+    <a class="ui black icon button m-top-right m-mobile-show menu-toggle">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--中间内容：左边放博客列表，右边放博客标签-->
+<div class="m-padded-tb-big m-container">
+    <div class="ui container">
+        <div class="ui grid stackable">
+            <!--左边显示博客信息-->
+            <div class="eleven wide column">
+                <!--header-->
+                <div class="ui segment top attached">
+                    <div class="ui two column grid middle aligned">
+                        <div class="column">
+                            <h3 class="ui teal header">博客</h3>
+                        </div>
+                        <div class="column right aligned">
+                            共 <h3 class="ui orange header m-inline-block m-text-thin">14</h3> 篇
+                        </div>
+                    </div>
+                </div>
+                <!--content：存放单独的博客信息-->
+                <div class="ui attached segment">
+                    <!--第一篇博客：左边的博客信息，右边是博客图片-->
+                    <div class="ui segment padded m-padded-tb-big vertical">
+                        <div class="ui grid stackable mobile reversed">
+                            <!--博客内容：标题、内容、作者-->
+                            <div class="eleven wide column">
+                                <!--标题-->
+                                <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
+                                <!--内容摘要-->
+                                <p class="m-text">
+                                    我是博客内容！！！
+                                </p>
+                                <!--博客的作者信息-->
+                                <div class="ui grid">
+                                    <!--头像、作者名、日期、浏览量-->
+                                    <div class="eleven wide column">
+                                        <div class="ui horizontal link list mini">
+                                            <div class="item">
+                                                <img src="../static/images/example-user.jpg" style="width: 30px;height: 30px"
+                                                     class="ui avatar image">
+                                                <div class="content"><a class="header" href="#">小咸鱼</a></div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2020-01-01
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>101
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--博客标签显示-->
+                                    <div class="five wide column right aligned ">
+                                        <a href="#" class="ui label teal basic m-padded-mini" target="_blank">认知升级</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--博客图片-->
+                            <div class="five wide column">
+                                <div class="ui grid">
+                                    <a href="#" target="_blank">
+                                        <img src="../static/images/example-blog.jpg" style="width: 180px;height: 120px">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui segment padded m-padded-tb-big vertical">
+                        <div class="ui grid stackable mobile reversed">
+                            <!--博客内容：标题、内容、作者-->
+                            <div class="eleven wide column">
+                                <!--标题-->
+                                <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
+                                <!--内容摘要-->
+                                <p class="m-text">
+                                    我是博客内容！！！
+                                </p>
+                                <!--博客的作者信息-->
+                                <div class="ui grid">
+                                    <!--头像、作者名、日期、浏览量-->
+                                    <div class="eleven wide column">
+                                        <div class="ui horizontal link list mini">
+                                            <div class="item">
+                                                <img src="../static/images/example-user.jpg" style="width: 30px;height: 30px"
+                                                     class="ui avatar image">
+                                                <div class="content"><a class="header" href="#">小咸鱼</a></div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2020-01-01
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>101
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--博客标签显示-->
+                                    <div class="five wide column right aligned ">
+                                        <a href="#" class="ui label teal basic m-padded-mini" target="_blank">认知升级</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--博客图片-->
+                            <div class="five wide column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/example-blog.jpg" style="width: 180px;height: 120px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer：博客上下翻页-->
+                <div class="ui attached segment">
+                    <div class="ui two column grid middle aligned">
+                        <div class="column">
+                            <a href="#" class="ui button teal basic mini">上一页</a>
+                        </div>
+                        <div class="two column right aligned">
+                            <a href="#" class="ui button teal basic mini">下一页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--右边显示博客标签信息-->
+            <div class="five wide column">
+                <!--分类-->
+                <div class="ui segments">
+                    <!--标题-->
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i>分类
+                            </div>
+                            <div class="column right aligned">
+                                <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--内容-->
+                    <div class="ui teal segment">
+                        <div class="ui fluid vertical menu">
+                            <a href="#" target="_blank" class="item">
+                                分类1
+                                <div class="ui left pointing label teal">13</div>
+                            </a>
+                            <a href="#" target="_blank" class="item">
+                                分类2
+                                <div class="ui left pointing label teal">13</div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--标签-->
+                <div class="ui segments">
+                    <!--标题-->
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="tags icon"></i>标签
+                            </div>
+                            <div class="column right aligned">
+                                <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--内容-->
+                    <div class="ui teal segment">
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                            方法论
+                            <div class="detail">233</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                            方法论
+                            <div class="detail">233</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                            方法论
+                            <div class="detail">233</div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!--最新推荐-->
+                <div class="ui segments">
+                    <!--标题-->
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="bookmark icon"></i>最新推荐
+                            </div>
+                            <div class="column right aligned">
+                                <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--内容-->
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class="ui m-black m-text-thin">方法论</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class="ui m-black m-text-thin">方法论</a>
+                    </div>
+
+                </div>
+
+                <!--二维码-->
+                <h4 class="ui horizontal divider header m-margin-top">扫码关注我</h4>
+                <div class="ui card centered" style="width: 10em;height: 10em;">
+                    <img src="../static/images/myQQ.png" th:src="@{/images/myQQ.png}" alt="" class="ui rounded image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部：二维码、相关信息、版权号-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <!--上半部分-->
+        <div class="ui grid divided inverted stackable">
+            <!--二维码-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="../static/images/myQQ.png" class="ui rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+
+            <!--相关信息-->
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">博客</a>
+                    <a href="#" class="item">博客</a>
+                    <a href="#" class="item">博客</a>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:3466151978@qq.com</a>
+                    <a href="#" class="item">GitHub:</a>
+                    <a href="#" class="item">Bilibili:</a>
+                </div>
+            </div>
+
+            <div class="seven wide column m-text-thin m-text-spaced">
+                <h4 class="ui inverted header">MyBlog</h4>
+                <p>
+                    爱好编程，做让别人记住的程序员！
+                </p>
+            </div>
+        </div>
+
+        <div class="ui inverted section divider"></div>
+        <!--版权号-->
+        <p class="m-text-thin m-text-spaced" style="opacity: 0.5">
+            Copyright © 2020 Blog Designed By Zjy
+        </p>
+
+    </div>
+</footer>
+
+
+<!--引入jquery和semantic UI的js文件-->
+<script crossorigin="anonymous" integrity="sha384-LVoNJ6yst/aLxKvxwp6s2GAabqPczfWh6xzm38S/YtjUyZ+3aTKOnD/OJVGYLZDl"
+        src="https://lib.baomitu.com/jquery/3.5.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+
+<script>
+    /*控制移动端按钮点击后出现目录*/
+    $('.menu-toggle').click(function () {
+        $('.menu-toggle-item').toggleClass('m-mobile-hide');
+    });
+
+</script>
+
+
 </body>
 </html>
