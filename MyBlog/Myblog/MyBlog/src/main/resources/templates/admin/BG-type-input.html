@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/_fragments-bg :: head(~{::title})">
+    <title>后台管理-分类新增</title>
+</head>
+<body>
+<!--四个部分：nav,left,right,footer-->
+<!--导航-->
+<nav th:replace="common/_fragments-bg :: nav(0)"></nav>
+
+<!--二级导航-->
+<div class="ui menu attached pointing">
+    <div class="ui container">
+        <div class="right menu">
+            <a th:href="@{/admin/types/input}" class="active teal item">新增</a>
+            <a th:href="@{/admin/types}" class="item">分类列表</a>
+        </div>
+
+    </div>
+</div>
+
+<!--中间内容-->
+<div class="m-padded-tb-massive m-container">
+    <div class="ui container">
+        <form th:action="@{/admin/types}" method="post" class="ui form" th:object="${type}">
+
+            <div class="field required">
+                <div class="ui left labeled input">
+                    <label class="ui teal basic label">分类名</label>
+                    <input type="text" name="name" placeholder="分类名" th:value="*{name}">
+                </div>
+            </div>
+
+            <div class="ui error message"></div>
+
+            <!--/*/
+            <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                <i class="close icon"></i>
+                <div class="header">验证失败</div>
+                <p th:errors="*{name}">提交信息不符合规则</p>
+            </div>
+            /*/-->
+
+            <div class="ui container right aligned">
+                <button class="ui button" type="button" onclick="window.history.go(-1)">返回</button>
+                <button type="submit" class="ui button teal">新增</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!--底部-->
+<footer th:replace="common/_fragments-bg :: footer"></footer>
+
+
+<!--/*/<th:block th:replace="common/_fragments-bg :: script">/*/-->
+<!--/*/</th:block>/*/-->
+
+<script>
+    /*控制移动端按钮点击后出现目录*/
+    $('.menu-toggle').click(function () {
+        $('.menu-toggle-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown();
+
+    //方法一：前端校验
+    $('.ui.form').form({
+        fields:{
+            title: {
+                identifier: 'name',
+                rules:[{
+                    type:'empty',
+                    prompt:'请输入分类名称'
+                }]
+            }
+        }
+    });
+
+    //方法二：后端校验，实体类添加@NotBlank注解，并在前台页面和后台Controller进行相关设置
+
+    /*！！！待解决*/
+    //信息提示关闭的初始化
+    $('.message .close').on('click',function () {
+        $(this).closest('message').transition('fade');
+    });
+
+</script>
+
+
+</body>
+</html>

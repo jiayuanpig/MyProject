@@ -1,6 +1,7 @@
 package com.zjy.myblog.po;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class Type {
     @GeneratedValue
     private Long id;
 
+    @NotBlank(message = "类型名不能为空")
     private String name;    //类型名
 
     @OneToMany(mappedBy = "type")

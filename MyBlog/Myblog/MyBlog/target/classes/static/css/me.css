@@ -84,10 +84,13 @@
 
 .m-container {
     max-width: 80em !important;
+    min-height: 40em !important;
     margin: auto !important;
 }
 .m-container-small {
     max-width: 60em !important;
+    min-height: 40em !important;
+    margin: auto !important;
 }
 
 

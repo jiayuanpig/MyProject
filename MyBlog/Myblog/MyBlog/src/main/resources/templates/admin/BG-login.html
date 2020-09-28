@@ -4,7 +4,7 @@
     <title >博客管理-后台登录</title>
 </head>
 
-<body>
+<body style="height: 100%">
 
 <br>
 <br>
@@ -55,11 +55,11 @@
 <!--/*/</th:block>/*/-->
 <script>
     /*表单验证*/
-    $('.ui.form').form(function () {
+    $('.ui.form').form({
         fields:{
             username:{
                 identifier:'username',
-                rules:[{
+                rules : [{
                     type:'empty',
                     prompt:'请输入密码'
                 }]

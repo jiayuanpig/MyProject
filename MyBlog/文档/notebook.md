@@ -244,15 +244,39 @@ MD5加密
 
 登录拦截器
 
+​	配置拦截器时需要实现WebMvcConfigurer接口，才能保证静态资源不被拦截
+
+
+
+分类管理
+
+​	分类页面
+
+​	分类列表分页
+
+​	分类的新增、修改、删除
+
+
+
+标签管理
 
 
 
 
 
+# 代码分析
 
+Java文件包
 
-
-
+- po（Class）：实体类，里面对应有实体属性和实体之间的关系
+- dao（Interface）：类直接操作数据库的方法，继承JpaRepostory，不要写具体的实现方法
+- service（Interface + ClassImpl）：定义业务方法
+- web（Controller的Class）：处理前端响应数据
+- util：存放自定义的相关工具类
+- exception：存放自定义的异常类，继承RuntimeException类
+- aspect：存放自定义的AOP方法，需要添加AOP注解
+- handler：前端控制器，可以设置异常跳转到自定义的错误页面，使用@ExceptionHandler注解
+- interceptor：前端过滤器，自定义拦截器，需要继承HandlerInterceptorAdapter类，可以设定后台管理页面需要登录，需要将自定义拦截器通过配置添加到框架中，需要实现WebMvcConfigurer接口
 
 
 
@@ -264,7 +288,13 @@ MD5加密
 
 博客详情页面工具栏滚动显示问题
 
+分类管理无法分页
 
+操作完成组件关闭异常
+
+
+
+添加重复分类没有生效
 
 
 

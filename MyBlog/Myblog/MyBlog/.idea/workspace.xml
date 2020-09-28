@@ -21,9 +21,32 @@
   <component name="ChangeListManager">
     <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blog-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments-bg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments-bg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zjy/myblog/po/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zjy/myblog/po/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zjy/myblog/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/me.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-input.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/_fragments-bg.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/_fragments-bg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/_fragments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../文档/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../文档/notebook.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +93,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\admin" />
-      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates" />
-      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\admin" />
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates" />
@@ -82,8 +100,29 @@
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\static" />
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zjy.myblog.web.admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\admin" />
+      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates" />
+      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\common" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MyblogApplication">
+    <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zjy.myblog.util.MD5Utils" />
+      <module name="myblog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zjy.myblog.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyblogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="myblog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zjy.myblog.MyblogApplication" />
@@ -91,6 +130,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MD5Utils" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -108,6 +152,8 @@
       <workItem from="1600700362769" duration="16000" />
       <workItem from="1601082802056" duration="2303000" />
       <workItem from="1601103357757" duration="25260000" />
+      <workItem from="1601167845690" duration="6905000" />
+      <workItem from="1601177096603" duration="15051000" />
     </task>
     <servers />
   </component>
@@ -127,49 +173,57 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="662" y="301" width="530" height="221" key="#Assign_Data_Sources" timestamp="1601196739659">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="662" y="301" width="530" height="221" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1601196739659" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600560920797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600560920797" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601134200831">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601197725167">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601134200831" />
-    <state width="1493" height="122" key="GridCell.Tab.0.bottom" timestamp="1601137602735">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601197725167" />
+    <state width="1493" height="33" key="GridCell.Tab.0.bottom" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601137602735" />
-    <state width="1493" height="122" key="GridCell.Tab.0.center" timestamp="1601137602735">
+    <state width="1493" height="33" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="33" key="GridCell.Tab.0.center" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601137602735" />
-    <state width="1493" height="122" key="GridCell.Tab.0.left" timestamp="1601137602734">
+    <state width="1493" height="33" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="33" key="GridCell.Tab.0.left" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601137602734" />
-    <state width="1493" height="122" key="GridCell.Tab.0.right" timestamp="1601137602735">
+    <state width="1493" height="33" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="33" key="GridCell.Tab.0.right" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601137602735" />
-    <state width="1493" height="122" key="GridCell.Tab.1.bottom" timestamp="1601137602736">
+    <state width="1493" height="33" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="33" key="GridCell.Tab.1.bottom" timestamp="1601214324508">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601137602736" />
-    <state width="1493" height="122" key="GridCell.Tab.1.center" timestamp="1601137602735">
+    <state width="1493" height="33" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601214324508" />
+    <state width="1493" height="33" key="GridCell.Tab.1.center" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601137602735" />
-    <state width="1493" height="122" key="GridCell.Tab.1.left" timestamp="1601137602735">
+    <state width="1493" height="33" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="33" key="GridCell.Tab.1.left" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601137602735" />
-    <state width="1493" height="122" key="GridCell.Tab.1.right" timestamp="1601137602735">
+    <state width="1493" height="33" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="33" key="GridCell.Tab.1.right" timestamp="1601214324507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601137602735" />
+    <state width="1493" height="33" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1601107914236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601107914236" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601197972010">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601197972010" />
   </component>
 </project>

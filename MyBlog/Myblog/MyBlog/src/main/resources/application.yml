@@ -3,6 +3,7 @@ spring:
   thymeleaf:
     mode: HTML
     encoding: UTF-8
+    suffix: .html
     servlet:
       content-type: text/html
     cache: false

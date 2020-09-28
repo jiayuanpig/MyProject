@@ -32,9 +32,9 @@
             <!--logo-->
             <h2 class="ui header teal item">MyBlog后台管理</h2>
             <!--导航页-->
-            <a href="/index" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==1}?'active'"><i class="home icon"></i>博客管理</a>
-            <a href="/types" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==2}?'active'"><i class="idea icon"></i>分类管理</a>
-            <a href="/tags" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==3}?'active'"><i class="tags icon"></i>标签管理</a>
+            <a th:href="@{/admin/blogs}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==1}?'active'"><i class="home icon"></i>博客管理</a>
+            <a th:href="@{/admin/types}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==2}?'active'"><i class="idea icon"></i>分类管理</a>
+            <a th:href="@{/admin/tags}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==3}?'active'"><i class="tags icon"></i>标签管理</a>
 
             <!--登录用户-->
             <div class="right menu m-mobile-hide">
@@ -115,7 +115,7 @@
             src="https://lib.baomitu.com/jquery/3.5.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <!--引入平滑滚动-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
 
     <!--引入代码高亮-->
     <script src="../static/lib/prismjs/prism.js" th:src="@{/lib/prismjs/prism.js}"></script>
