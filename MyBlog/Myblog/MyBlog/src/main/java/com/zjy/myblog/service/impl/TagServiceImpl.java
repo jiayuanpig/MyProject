@@ -11,49 +11,75 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class TagServiceImpl implements TagService {
 
     @Autowired
-    private TagRepository TagRepository;
+    private TagRepository tagRepository;
 
     @Transactional
     @Override
     public Tag saveTag(Tag Tag) {
-        return TagRepository.save(Tag);
+        return tagRepository.save(Tag);
     }
 
     @Transactional
     @Override
     public Tag getTag(Long id) {
-        return TagRepository.getOne(id);
+        return tagRepository.getOne(id);
     }
 
     @Override
     public Tag getTagByName(String name) {
-        return TagRepository.findByName(name);
+        return tagRepository.findByName(name);
     }
 
     @Transactional
     @Override
     public Page<Tag> listTag(Pageable pageable) {
-        return TagRepository.findAll(pageable);
+        return tagRepository.findAll(pageable);
     }
+
+    @Override
+    public List<Tag> listTag() {
+        return tagRepository.findAll();
+    }
+
+    @Override
+    public List<Tag> listTag(String ids) {
+        return tagRepository.findAllById(convertToList(ids));
+    }
+
+    //将字符串转为集合（以逗号分割）
+    private List<Long> convertToList(String ids){
+        List<Long> list = new ArrayList<>();
+        if(!"".equals(ids) && ids != null){
+            String[] idArray = ids.split(",");
+            for (int i = 0; i < idArray.length; i++) {
+                list.add(new Long(idArray[i]));
+            }
+        }
+        return list;
+    }
+
 
     @Transactional
     @Override
     public Tag updateTag(Long id,Tag Tag) {
-        Tag t = TagRepository.getOne(id);
+        Tag t = tagRepository.getOne(id);
         if(t == null){
             throw new NotFoundException("不存在该类型");
         }
         BeanUtils.copyProperties(Tag,t);
-        return TagRepository.save(t);
+        return tagRepository.save(t);
     }
 
     @Transactional
     @Override
     public void deleteTag(Long id) {
-        TagRepository.deleteById(id);
+        tagRepository.deleteById(id);
     }
 }

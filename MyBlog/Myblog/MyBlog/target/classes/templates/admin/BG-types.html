@@ -50,6 +50,7 @@
             <tbod>
                 <tr th:each="type,iterStat: ${page.content}">
                     <td th:text="${iterStat.count}">1</td>
+                    <!--/*@thymesVar id="type" type="com.zjy.myblog.po.Type"*/-->
                     <td th:text="${type.name}">Java</td>
                     <td>
                         <a th:href="@{/admin/types/{id}/input(id = ${type.id})}" class="ui button mini teal">编辑</a>
@@ -97,7 +98,6 @@
 
     $('.ui.dropdown').dropdown();
 
-    /*！！！待解决*/
     //信息提示关闭的初始化
     $('.message .close').on('click',function () {
         $(this).closest('.message').transition('fade');

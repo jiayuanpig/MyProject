@@ -21,11 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/web/admin/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/web/admin/TypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-type-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-type-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/dao/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/dao/TagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/TypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/impl/TypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/web/admin/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/web/admin/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blog-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blog-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-tags.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-types.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../文档/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../文档/notebook.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +143,7 @@
       <workItem from="1601167845690" duration="6905000" />
       <workItem from="1601177096603" duration="15051000" />
       <workItem from="1601626560211" duration="6897000" />
+      <workItem from="1601687156962" duration="24543000" />
     </task>
     <servers />
   </component>
@@ -156,50 +163,50 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="662" y="301" width="530" height="221" key="#Assign_Data_Sources" timestamp="1601196739659">
+    <state x="662" y="301" width="530" height="221" key="#Assign_Data_Sources" timestamp="1601732459359">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="662" y="301" width="530" height="221" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1601196739659" />
+    <state x="662" y="301" width="530" height="221" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1601732459359" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600560920797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600560920797" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601197725167">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601719312590">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601197725167" />
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom" timestamp="1601633464428">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601719312590" />
+    <state width="1493" height="38" key="GridCell.Tab.0.bottom" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601633464428" />
-    <state width="1493" height="115" key="GridCell.Tab.0.center" timestamp="1601633464427">
+    <state width="1493" height="38" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.0.center" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601633464427" />
-    <state width="1493" height="115" key="GridCell.Tab.0.left" timestamp="1601633464427">
+    <state width="1493" height="38" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.0.left" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601633464427" />
-    <state width="1493" height="115" key="GridCell.Tab.0.right" timestamp="1601633464428">
+    <state width="1493" height="38" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.0.right" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601633464428" />
-    <state width="1493" height="115" key="GridCell.Tab.1.bottom" timestamp="1601633464429">
+    <state width="1493" height="38" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.1.bottom" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
-    <state width="1493" height="115" key="GridCell.Tab.1.center" timestamp="1601633464429">
+    <state width="1493" height="38" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.1.center" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
-    <state width="1493" height="115" key="GridCell.Tab.1.left" timestamp="1601633464429">
+    <state width="1493" height="38" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.1.left" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
-    <state width="1493" height="115" key="GridCell.Tab.1.right" timestamp="1601633464429">
+    <state width="1493" height="38" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
+    <state width="1493" height="38" key="GridCell.Tab.1.right" timestamp="1601736377640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
+    <state width="1493" height="38" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601736377640" />
     <state width="1493" height="115" key="GridCell.Tab.2.bottom" timestamp="1601633464430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -220,6 +227,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601107914236" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601734727677">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601734727677" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601197972010">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -14,10 +14,13 @@ public class Blog {
     private Long id;
 
     private String title;           //标题
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob//数据库对应类型为LongText
     private String content;         //内容
     private String firstPicture;    //首图
     private String flag;            //标记
-    private String views;           //浏览次数
+    private Integer views;           //浏览次数
     private boolean appreciation;   //开启赞赏
     private boolean shareStatement; //开启版权
     private boolean commentabled;   //开启评论
@@ -32,10 +35,15 @@ public class Blog {
     @ManyToOne
     private Type type;              //一篇博客对应一种类型
 
+
     /*在多对多的情况下，任选一方来维护关系，这里选Blog来维护*/
     /*设置级联新增：在博客设置标签时，自动将数据库没有的标签添加到数据库中*/
     @ManyToMany(cascade = {CascadeType.PERSIST})
     private List<Tag> tags = new ArrayList<>(); //一篇博客对应多个标签
+
+    //不保存至数据库
+    @Transient
+    private String tagIds;          //以字符串的形式存储tag的一组id
 
     @ManyToOne
     private User user;              //一篇博客对应一个用户
@@ -87,11 +95,11 @@ public class Blog {
         this.flag = flag;
     }
 
-    public String getViews() {
+    public Integer getViews() {
         return views;
     }
 
-    public void setViews(String views) {
+    public void setViews(Integer views) {
         this.views = views;
     }
 
@@ -182,6 +190,38 @@ public class Blog {
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
+
+
+    public void init() {
+        this.tagIds = tagsToIds(this.tags);
+    }
+
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer sb = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if(flag){
+                    sb.append(",");
+                }else {
+                    flag = true;
+                }
+                sb.append(tag.getId());
+            }
+            return sb.toString();
+        }else {
+            return tagIds;
+        }
+    }
+
 
     @Override
     public String toString() {

@@ -41,7 +41,7 @@
             <p th:text="${message}"></p>
         </div>
 
-        <table class="ui table celled">
+        <table class="ui table compact teal">
             <thead>
             <th></th>
             <th>名称</th>
@@ -50,6 +50,7 @@
             <tbod>
                 <tr th:each="tag,iterStat: ${page.content}">
                     <td th:text="${iterStat.count}">1</td>
+                    <!--/*@thymesVar id="tag" type="com.zjy.myblog.po.Tag"*/-->
                     <td th:text="${tag.name}">Java</td>
                     <td>
                         <a th:href="@{/admin/tags/{id}/input(id = ${tag.id})}" class="ui button mini teal">编辑</a>
