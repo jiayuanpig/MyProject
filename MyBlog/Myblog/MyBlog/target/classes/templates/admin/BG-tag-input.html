@@ -12,8 +12,8 @@
 <div class="ui menu attached pointing">
     <div class="ui container">
         <div class="right menu">
-            <a th:href="@{/admin/types/input}" class="active teal item">新增</a>
-            <a th:href="@{/admin/types}" class="item">分类列表</a>
+            <a th:href="@{/admin/tags/input}" class="active teal item">新增</a>
+            <a th:href="@{/admin/tags}" class="item">分类列表</a>
         </div>
 
     </div>
@@ -22,7 +22,7 @@
 <!--中间内容-->
 <div class="m-padded-tb-massive m-container">
     <div class="ui container">
-        <form method="post" class="ui form" th:object="${type}" th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})}" >
+        <form method="post" class="ui form" th:object="${tag}" th:action="*{id}==null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})}" >
             <input type="hidden" name="id" th:value="*{id}">
             <div class="field required">
                 <div class="ui left labeled input">
@@ -80,6 +80,7 @@
 
     //方法二：后端校验，实体类添加@NotBlank注解，并在前台页面和后台Controller进行相关设置
 
+    /*！！！待解决*/
     //信息提示关闭的初始化
     $('.message .close').on('click',function () {
         $(this).closest('.message').transition('fade');

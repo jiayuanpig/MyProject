@@ -21,32 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-blog-input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments-bg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments-bg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/_fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zjy/myblog/po/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zjy/myblog/po/Type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zjy/myblog/service/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/me.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-input.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/BG-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/BG-test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/_fragments-bg.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/_fragments-bg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/po/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/web/admin/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/web/admin/TypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-type-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-type-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/BG-types.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../文档/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../文档/notebook.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,20 +72,23 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\admin" />
+      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates" />
+      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\common" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zjy.myblog.web.admin" />
+      <recent name="com.zjy.myblog.service.impl" />
+      <recent name="com.zjy.myblog.service" />
+      <recent name="com.zjy.myblog.dao" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\admin" />
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates" />
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\common" />
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\static" />
       <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zjy.myblog.web.admin" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\admin" />
-      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates" />
-      <recent name="G:\GitHub\MyProject\MyBlog\Myblog\MyBlog\src\main\resources\templates\common" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MyblogApplication">
@@ -154,6 +136,7 @@
       <workItem from="1601103357757" duration="25260000" />
       <workItem from="1601167845690" duration="6905000" />
       <workItem from="1601177096603" duration="15051000" />
+      <workItem from="1601626560211" duration="6897000" />
     </task>
     <servers />
   </component>
@@ -185,38 +168,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601197725167" />
-    <state width="1493" height="33" key="GridCell.Tab.0.bottom" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.0.bottom" timestamp="1601633464428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
-    <state width="1493" height="33" key="GridCell.Tab.0.center" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601633464428" />
+    <state width="1493" height="115" key="GridCell.Tab.0.center" timestamp="1601633464427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
-    <state width="1493" height="33" key="GridCell.Tab.0.left" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601633464427" />
+    <state width="1493" height="115" key="GridCell.Tab.0.left" timestamp="1601633464427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
-    <state width="1493" height="33" key="GridCell.Tab.0.right" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601633464427" />
+    <state width="1493" height="115" key="GridCell.Tab.0.right" timestamp="1601633464428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
-    <state width="1493" height="33" key="GridCell.Tab.1.bottom" timestamp="1601214324508">
+    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601633464428" />
+    <state width="1493" height="115" key="GridCell.Tab.1.bottom" timestamp="1601633464429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601214324508" />
-    <state width="1493" height="33" key="GridCell.Tab.1.center" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
+    <state width="1493" height="115" key="GridCell.Tab.1.center" timestamp="1601633464429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
-    <state width="1493" height="33" key="GridCell.Tab.1.left" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
+    <state width="1493" height="115" key="GridCell.Tab.1.left" timestamp="1601633464429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
-    <state width="1493" height="33" key="GridCell.Tab.1.right" timestamp="1601214324507">
+    <state width="1493" height="115" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
+    <state width="1493" height="115" key="GridCell.Tab.1.right" timestamp="1601633464429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="33" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601214324507" />
+    <state width="1493" height="115" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
+    <state width="1493" height="115" key="GridCell.Tab.2.bottom" timestamp="1601633464430">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="115" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601633464430" />
+    <state width="1493" height="115" key="GridCell.Tab.2.center" timestamp="1601633464430">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="115" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1601633464430" />
+    <state width="1493" height="115" key="GridCell.Tab.2.left" timestamp="1601633464429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="115" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1601633464429" />
+    <state width="1493" height="115" key="GridCell.Tab.2.right" timestamp="1601633464430">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="115" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1601633464430" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1601107914236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -14,7 +14,6 @@
             <p></p>
         </div>
     </div>
-    <h1>发生错误！！！</h1>
     <!-- 移除所有标签体，以文本形式输出，在网页源代码中以注释的形式查看报错信息   -->
     <div th:utext="'&lt;!--'" th:remove="tag"></div>
     <div th:utext="'Failed Request URL:'+${url}" th:remove="tag"></div>
