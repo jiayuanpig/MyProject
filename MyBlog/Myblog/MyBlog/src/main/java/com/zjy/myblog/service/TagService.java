@@ -22,6 +22,8 @@ public interface TagService {
     /*根据一组ID(String类型，通过逗号隔开)获取一组标签*/
     List<Tag> listTag(String ids);
 
+    List<Tag> listTagTop(Integer size);
+
     Tag updateTag(Long id,Tag Tag);
 
     void deleteTag(Long id);
