@@ -21,6 +21,10 @@ public interface BlogService {
     void deleteBlog(Long id);
 
     List<Blog> listRecommendBlogTop(Integer size);
-    
+
+    Page<Blog> listBlog(String query,Pageable pageable);
+
+    /*自动将md文本内容转换为html内容*/
+    Blog getAndConvert(Long id);
 
 }
