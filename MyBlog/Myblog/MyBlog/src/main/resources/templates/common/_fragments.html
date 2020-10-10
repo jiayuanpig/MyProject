@@ -30,11 +30,11 @@
             <!--logo-->
             <h2 class="ui header teal item">MyBlog</h2>
             <!--导航页-->
-            <a href="/index" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==1}?'active'"><i class="home icon"></i>首页</a>
-            <a href="/types" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==2}?'active'"><i class="idea icon"></i>分类</a>
-            <a href="/tags" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==3}?'active'"><i class="tags icon"></i>标签</a>
-            <a href="/archives" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==4}?'active'"><i class="clone icon"></i>归档</a>
-            <a href="/about" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==5}?'active'"><i class="info icon"></i>关于我</a>
+            <a th:href="@{/}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==1}?'active'"><i class="home icon"></i>首页</a>
+            <a th:href="@{/types/-1}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==2}?'active'"><i class="idea icon"></i>分类</a>
+            <a th:href="@{/tags/-1}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==3}?'active'"><i class="tags icon"></i>标签</a>
+            <a th:href="@{/archives}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==4}?'active'"><i class="clone icon"></i>归档</a>
+            <a th:href="@{/about}" class="item m-mobile-hide menu-toggle-item" th:classappend="${index==5}?'active'"><i class="info icon"></i>关于我</a>
             <!--搜索框-->
             <div class="right item">
                 <form name="search" th:action="@{/search}" method="get" target="_blank">
@@ -78,7 +78,9 @@
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">Email:3466151978@qq.com</a>
+                    <a href="#" class="item">
+                        Email:<span th:text="#{index.email}">123@qq.com</span>
+                    </a>
                     <a href="#" class="item">GitHub:</a>
                     <a href="#" class="item">Bilibili:</a>
                 </div>
