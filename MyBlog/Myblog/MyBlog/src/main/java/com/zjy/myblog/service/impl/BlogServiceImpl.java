@@ -92,8 +92,8 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
-        Sort sort = new Sort(Sort.Direction.DESC,"updateTime");
-        Pageable pageable = new PageRequest(0,size,sort);
+        Sort sort = Sort.by(Sort.Direction.DESC,"updateTime");
+        Pageable pageable = PageRequest.of(0,size,sort);
         return blogRepository.findTop(pageable);
     }
 

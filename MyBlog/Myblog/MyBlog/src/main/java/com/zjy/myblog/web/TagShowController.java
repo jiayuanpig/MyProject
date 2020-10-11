@@ -11,7 +11,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class TagShowController {
     private BlogService blogService;
 
     @GetMapping("/tags/{id}")
-    public String blog(Model model, @RequestParam Long id,
+    public String blog(Model model, @PathVariable Long id,
                        @PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable) {
         List<Tag> tags = tagService.listTagTop(10000);
         if (id == -1) {

@@ -22,26 +22,30 @@
                 </div>
             </div>
         </div>
-        <!--分类-->
+
+        <!--分类列表-->
         <div class="ui attached segment m-padded-tb-large">
             <div class="ui labeled button m-margin-tb-tiny" th:each="type:${types}">
+                <!--/*@thymesVar id="type" type="com.zjy.myblog.po.Type"*/-->
                 <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic button" th:text="${type.name}" th:classappend="${type.id==activeTypeId}?'teal'">思考与感悟</a>
                 <div class="ui basic left pointing label" th:text="${#arrays.length(type.blogs)}" th:classappend="${type.id==activeTypeId}?'teal'">24</div>
             </div>
         </div>
-        <!--列表-->
+
+        <!--对应博客-->
         <div class="ui segment teal top attached">
             <!--第一篇博客：左边的博客信息，右边是博客图片-->
+            <!--/*@thymesVar id="page" type="org.springframework.data.domain.Page"*/-->
             <div class="ui segment padded m-padded-tb-big vertical" th:each="blog : ${page.content}">
+                <!--/*@thymesVar id="blog" type="com.zjy.myblog.po.Blog"*/-->
                 <div class="ui grid stackable mobile reversed middle aligned">
                     <!--博客内容：标题、内容、作者-->
                     <div class="eleven wide column">
                         <!--标题-->
                         <h3 class="ui header">
-                            <!--/*@thymesVar id="blog" type="com.zjy.myblog.po.Blog"*/-->
                             <a class="m-black" target="_blank" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}">你真的理解什么是财富自由吗？</a></h3>
                         <!--内容摘要-->
-                        <p class="m-text" th:text="|${blog.description}......|">
+                        <p class="m-text" th:text="|${blog.description}...|">
                             我是博客内容！！！
                         </p>
                         <!--博客的作者信息-->
@@ -50,7 +54,7 @@
                             <div class="eleven wide column">
                                 <div class="ui horizontal link list mini">
                                     <div class="item">
-                                        <img src="../static/images/example-user.jpg" th:src="@{${blog.user.avatar}" style="width: 30px;height: 30px"
+                                        <img src="../static/images/example-user.jpg" th:src="@{${blog.user.avatar}}" style="width: 30px;height: 30px"
                                              class="ui avatar image">
                                         <div class="content"><a class="header" href="#" th:text="${blog.user.nickname}">小咸鱼</a></div>
                                     </div>
@@ -78,8 +82,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
         <!--footer：博客上下翻页-->
         <div class="ui pagination menu" th:if="${page.totalPages}>1">
             <a class="icon item" th:href="@{/(page = ${page.number} - 1)}" th:unless="${page.first}">

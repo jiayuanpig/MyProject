@@ -26,11 +26,11 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
     int updateViews(Long id);
 
     /*查询博客的所有年份*/
-    @Query("select function('date_formate',b.updateTime,'%Y') as year from Blog b group by function('date_formate',b.updateTime,'%Y') order by year desc")
+    @Query("select function('date_format',b.updateTime,'%Y') as year from Blog b group by function('date_format',b.updateTime,'%Y') order by b.updateTime desc")
     List<String> findGroupYears();
 
     /*根据年份查询对应的博客*/
-    @Query("select b from Blog b where function('date_formate',b.updateTime,'%Y') = ?1")
+    @Query("select b from Blog b where function('date_format',b.updateTime,'%Y') = ?1")
     List<Blog> findByYear(String year);
 
 }

@@ -11,7 +11,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -24,9 +24,10 @@ public class TypeShowController {
     private BlogService blogService;
 
     @GetMapping("/types/{id}")
-    public String blog(Model model, @RequestParam Long id,
+    public String blog(Model model, @PathVariable Long id,
                        @PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable) {
         List<Type> types = typeService.listTypeTop(10000);
+        //从导航栏跳转，默认第一个标签
         if (id == -1) {
             id = types.get(0).getId();
         }
@@ -37,7 +38,6 @@ public class TypeShowController {
 
         model.addAttribute("types", types);
         model.addAttribute("page", blogService.listBlog(pageable,blog));
-        model.addAttribute("id", id);
         model.addAttribute("activeTypeId", id);
         return "types";
     }

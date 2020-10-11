@@ -12,4 +12,5 @@ spring:
     active: dev
 
 #默认头像
-comment.avatar:/images/avator.png
+comment:
+  avatar: /images/example-user.jpg

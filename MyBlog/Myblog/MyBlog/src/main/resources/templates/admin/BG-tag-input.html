@@ -22,7 +22,8 @@
 <!--中间内容-->
 <div class="m-padded-tb-massive m-container">
     <div class="ui container">
-        <form method="post" class="ui form" th:object="${tag}" th:action="*{id}==null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})}" >
+        <!--/*@thymesVar id="tag" type="com.zjy.myblog.po.Tag"*/-->
+        <form method="post" class="ui form" th:object="${tag}" th:action="${id}==null ? '@{/admin/tags}' : '@{/admin/tags/{id}(id=*{id})}'" >
             <input type="hidden" name="id" th:value="*{id}">
             <div class="field required">
                 <div class="ui left labeled input">

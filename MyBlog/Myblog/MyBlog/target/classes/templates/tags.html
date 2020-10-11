@@ -18,144 +18,87 @@
                     <h3 class="ui teal header">标签</h3>
                 </div>
                 <div class="column right aligned">
-                    共 <h3 class="ui orange header m-inline-block m-text-thin">14</h3> 个
+                    共 <h3 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(tags)}">14</h3> 个
                 </div>
             </div>
         </div>
-        <!--分类-->
+        <!--标签-->
         <div class="ui attached segment m-padded-tb-large">
-            <a href="#" target="_blank" class="ui basic left pointing label m-margin-tb-tiny teal">
-                方法论
-                <div class="detail">233</div>
-            </a>
-            <a href="#" target="_blank" class="ui basic left pointing label m-margin-tb-tiny">
-                方法论
-                <div class="detail">233</div>
-            </a>
-            <a href="#" target="_blank" class="ui basic left pointing label m-margin-tb-tiny">
-                方法论
-                <div class="detail">233</div>
+            <a th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic left pointing large label m-margin-tb-tiny" th:each="tag:${tags}" th:classappend="${tag.id==activeTagId}?'teal'">
+                <!--/*@thymesVar id="tag" type="com.zjy.myblog.po.Tag"*/-->
+                <span th:text="${tag.name}">思考与感悟</span>
+                <div class="detail" th:text="${#arrays.length(tag.blogs)}">233</div>
             </a>
         </div>
         <!--列表-->
         <div class="ui segment teal top attached">
             <!--第一篇博客：左边的博客信息，右边是博客图片-->
-            <div class="ui segment padded m-padded-tb-big vertical">
-                <div class="row">
-                    <div class="ui grid stackable mobile reversed">
-                        <!--博客内容：标题、内容、作者-->
-                        <div class="eleven wide column">
-                            <!--标题-->
-                            <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                            <!--内容摘要-->
-                            <p class="m-text">
-                                我是博客内容！！！
-                            </p>
-                            <!--博客的作者信息-->
-                            <div class="ui grid">
-                                <!--头像、作者名、日期、浏览量-->
-                                <div class="eleven wide column">
-                                    <div class="ui horizontal link list mini">
-                                        <div class="item">
-                                            <img src="../static/images/example-user.jpg" style="width: 30px;height: 30px"
-                                                 class="ui avatar image">
-                                            <div class="content"><a class="header" href="#">小咸鱼</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-01-01
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>101
-                                        </div>
+            <div class="ui segment padded m-padded-tb-big vertical" th:each="blog : ${page.content}">
+                <!--/*@thymesVar id="blog" type="com.zjy.myblog.po.Blog"*/-->
+                <div class="ui grid stackable mobile reversed middle aligned">
+                    <!--博客内容：标题、内容、作者-->
+                    <div class="eleven wide column">
+                        <!--标题-->
+                        <h3 class="ui header">
+                            <a class="m-black" target="_blank" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}">你真的理解什么是财富自由吗？</a></h3>
+                        <!--内容摘要-->
+                        <p class="m-text" th:text="|${blog.description}......|">
+                            我是博客内容！！！
+                        </p>
+                        <!--博客的作者信息-->
+                        <div class="ui grid">
+                            <!--头像、作者名、日期、浏览量-->
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list mini">
+                                    <div class="item">
+                                        <img src="../static/images/example-user.jpg" th:src="@{${blog.user.avatar}}" style="width: 30px;height: 30px"
+                                             class="ui avatar image">
+                                        <div class="content"><a class="header" href="#" th:text="${blog.user.nickname}">小咸鱼</a></div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020-01-01</span>
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i><span th:text="${blog.views}">101</span>
                                     </div>
                                 </div>
-                                <!--博客标签显示-->
-                                <div class="five wide column right aligned ">
-                                    <a href="#" class="ui label teal basic m-padded-mini" target="_blank">认知升级</a>
-                                </div>
                             </div>
-                        </div>
-                        <!--博客图片-->
-                        <div class="five wide column">
-                            <div class="ui grid">
-                                <a href="#" target="_blank">
-                                    <img src="../static/images/example-blog.jpg" style="width: 180px;height: 120px">
-                                </a>
+                            <!--博客标签显示-->
+                            <div class="five wide column right aligned ">
+                                <a href="#" class="ui label teal basic m-padded-mini" target="_blank" th:text="${blog.type.name}">认知升级</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="column m-padded-tb-small">
-                        <a href="#" class="ui basic teal left pointing label m-padded-tb-mini m-text-thin">方法论</a>
+                    <!--博客图片-->
+                    <div class="five wide column">
+                        <div class="ui grid">
+                            <a th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                <img src="../static/images/example-blog.jpg" th:src="@{${blog.firstPicture}}" style="width: 180px;height: 120px">
+                            </a>
+                        </div>
+                    </div>
+                    <!--博客标签-->
+                    <div class="row">
+                        <div class="column m-padded-tb-small">
+                            <a th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic left pointing label m-padded-tb-mini m-text-thin" th:each="tag:${blog.tags}" th:text="${tag.name}" th:classappend="${tag.id==activeTagId}?'teal'">方法论</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="ui segment padded m-padded-tb-big vertical">
-                <div class="row">
-                    <div class="ui grid stackable mobile reversed">
-                        <!--博客内容：标题、内容、作者-->
-                        <div class="eleven wide column">
-                            <!--标题-->
-                            <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                            <!--内容摘要-->
-                            <p class="m-text">
-                                我是博客内容！！！
-                            </p>
-                            <!--博客的作者信息-->
-                            <div class="ui grid">
-                                <!--头像、作者名、日期、浏览量-->
-                                <div class="eleven wide column">
-                                    <div class="ui horizontal link list mini">
-                                        <div class="item">
-                                            <img src="../static/images/example-user.jpg" style="width: 30px;height: 30px"
-                                                 class="ui avatar image">
-                                            <div class="content"><a class="header" href="#">小咸鱼</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-01-01
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>101
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--博客标签显示-->
-                                <div class="five wide column right aligned ">
-                                    <a href="#" class="ui label teal basic m-padded-mini" target="_blank">认知升级</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--博客图片-->
-                        <div class="five wide column">
-                            <div class="ui grid">
-                                <a href="#" target="_blank">
-                                    <img src="../static/images/example-blog.jpg" style="width: 180px;height: 120px">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column m-padded-tb-small">
-                        <a href="#" class="ui basic teal left pointing label m-padded-tb-mini m-text-thin">方法论</a>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
         <!--footer：博客上下翻页-->
-        <div class="ui attached segment">
-            <div class="ui two column grid middle aligned">
-                <div class="column">
-                    <a href="#" class="ui button teal basic mini">上一页</a>
-                </div>
-                <div class="two column right aligned">
-                    <a href="#" class="ui button teal basic mini">下一页</a>
-                </div>
-            </div>
+        <div class="ui pagination menu" th:if="${page.totalPages}>1">
+            <a class="icon item" th:href="@{/(page = ${page.number} - 1)}" th:unless="${page.first}">
+                <i class="left chevron icon"></i>
+            </a>
+            <!--<a class="item">1</a>
+            <a class="item">2</a>
+            <a class="item">...</a>
+            <a class="item">19</a>
+            <a class="item">20</a>-->
+            <a class="icon item" th:href="@{/(page = ${page.number} + 1)}" th:unless="${page.last}">
+                <i class="right chevron icon"></i>
+            </a>
         </div>
 
     </div>

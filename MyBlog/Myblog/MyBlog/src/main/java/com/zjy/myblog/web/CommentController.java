@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
@@ -28,21 +29,19 @@ public class CommentController {
     @GetMapping("/comments/{blogId}")
     public String comments(@PathVariable Long blogId, Model model) {
         model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
-
-        return "blog::commentList";
+        return "blog :: commentList";
     }
 
     @GetMapping("/comments")
-    public String post(@PathVariable Comment comment, HttpSession session){
+    public String post(@RequestParam Comment comment, HttpSession session) {
         Long blogId = comment.getBlog().getId();
         comment.setBlog(blogService.getBlog(blogId));
 
         User user = (User) session.getAttribute("user");
-        if(user != null){
+        if (user != null) {
             comment.setAdminComment(true);
             comment.setAvatar(user.getAvatar());
-//            comment.setNickname(user.getNickname());
-        }else {
+        } else {
             comment.setAvatar(avatar);
         }
 

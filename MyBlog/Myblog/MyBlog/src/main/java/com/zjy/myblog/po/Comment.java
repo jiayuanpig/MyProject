@@ -28,6 +28,7 @@ public class Comment {
     /*Comment存在自体联系：存在一个父对象和多个子对象*/
     @OneToMany(mappedBy = "parentComment")
     private List<Comment> replyComments = new ArrayList<>();
+
     @ManyToOne
     private Comment parentComment;
 

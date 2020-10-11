@@ -14,6 +14,7 @@ public class Blog {
     private Long id;
 
     private String title;           //标题
+    private String description;     //描述
 
     @Basic(fetch = FetchType.LAZY)
     @Lob//数据库对应类型为LongText
@@ -204,6 +205,14 @@ public class Blog {
         this.tagIds = tagsToIds(this.tags);
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     private String tagsToIds(List<Tag> tags) {
         if (!tags.isEmpty()) {
             StringBuffer sb = new StringBuffer();
@@ -228,10 +237,11 @@ public class Blog {
         return "Blog{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
                 ", content='" + content + '\'' +
                 ", firstPicture='" + firstPicture + '\'' +
                 ", flag='" + flag + '\'' +
-                ", views='" + views + '\'' +
+                ", views=" + views +
                 ", appreciation=" + appreciation +
                 ", shareStatement=" + shareStatement +
                 ", commentabled=" + commentabled +
@@ -239,6 +249,11 @@ public class Blog {
                 ", recommended=" + recommended +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", tagIds='" + tagIds + '\'' +
+                ", user=" + user +
+                ", comments=" + comments +
                 '}';
     }
 }

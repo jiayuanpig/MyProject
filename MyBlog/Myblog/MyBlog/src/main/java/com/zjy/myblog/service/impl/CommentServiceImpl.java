@@ -21,7 +21,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
-        Sort sort = new Sort(Sort.Direction.ASC,"createTime");
+        Sort sort = Sort.by(Sort.Direction.ASC,"createTime");
         //获取父评论为空的集合
         List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNull(blogId, sort);
         //将子回复变成平级关系方便前台展示

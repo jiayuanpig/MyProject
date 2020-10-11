@@ -17,63 +17,23 @@
                     <h3 class="ui teal header">归档</h3>
                 </div>
                 <div class="column right aligned">
-                    共 <h3 class="ui orange header m-inline-block m-text-thin">140</h3> 篇
+                    共 <h3 class="ui orange header m-inline-block m-text-thin" th:text="${blogCount}">140</h3> 篇
                 </div>
             </div>
         </div>
 
-        <div class="ui basic segment">
-            <h3 class="ui horizontal teal divider header">2020</h3>
+        <div class="ui basic segment" th:each="item:${archiveMap}">
+            <h3 class="ui horizontal teal divider header" th:text="${item.key}">2020</h3>
 
             <div class="ui vertical menu fluid">
-                <a href="#" target="_blank" class="item">
+                <a th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" th:each="blog:${item.value}">
+                    <!--/*@thymesVar id="blog" type="com.zjy.myblog.po.Blog"*/-->
                     <span>
-                        第一篇博客
-                        <div class="ui teal basic left pointing label">9月01</div>
+                        <span th:text="${blog.title}">第一篇博客</span>
+                        <div class="ui teal basic left pointing label" th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月01</div>
                     </span>
-                    <div class="ui orange basic label right aligned">原创</div>
+                    <div class="ui orange basic label right aligned" th:text="${blog.flag}">原创</div>
                 </a>
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        第一篇博客
-                        <div class="ui teal basic left pointing label">9月01</div>
-                    </span>
-                    <div class="ui orange basic label right aligned">原创</div>
-                </a>
-            </div>
-        </div>
-
-        <div class="ui basic segment">
-            <h3 class="ui horizontal teal divider header">2019</h3>
-
-            <div class="ui vertical menu fluid">
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        第一篇博客
-                        <div class="ui teal basic left pointing label">9月01</div>
-                    </span>
-                    <div class="ui orange basic label right aligned">原创</div>
-                </a>
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        第一篇博客
-                        <div class="ui teal basic left pointing label">9月01</div>
-                    </span>
-                    <div class="ui orange basic label right aligned">原创</div>
-                </a>
-            </div>
-        </div>
-
-
-        <!--footer：博客上下翻页-->
-        <div class="ui basic segment">
-            <div class="ui two column grid middle aligned">
-                <div class="column">
-                    <a href="#" class="ui button teal basic mini">上一页</a>
-                </div>
-                <div class="two column right aligned">
-                    <a href="#" class="ui button teal basic mini">下一页</a>
-                </div>
             </div>
         </div>
 
