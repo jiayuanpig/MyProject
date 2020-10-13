@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+C:\Users\ADMIN-JY\Desktop\ËÑË÷ÒýÇæ\moviePicker\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2761410164.index
-901250123.index
-4000584173.index
-2993962115.index
-4045127444.index
-3107673711.index

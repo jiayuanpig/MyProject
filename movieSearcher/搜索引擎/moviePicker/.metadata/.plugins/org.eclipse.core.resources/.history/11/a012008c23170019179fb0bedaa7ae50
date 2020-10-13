@@ -1,5 +1,0 @@
-DB_URL = "jdbc:mysql://localhost:3306/newspicker"
-USERNAME=root
-PASSWORD=
-JDBC_DRIVER=com.mysql.jdbc.Driver
-
