@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="" />
+    <list default="true" id="8ad5f014-08b3-4d2d-a516-de5129c0701d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/handler/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjy/myblog/handler/ControllerExceptionHandler.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,6 +143,7 @@
       <workItem from="1602319091468" duration="8624000" />
       <workItem from="1602378023739" duration="20277000" />
       <workItem from="1602463299156" duration="11000" />
+      <workItem from="1602555688221" duration="7034000" />
     </task>
     <servers />
   </component>

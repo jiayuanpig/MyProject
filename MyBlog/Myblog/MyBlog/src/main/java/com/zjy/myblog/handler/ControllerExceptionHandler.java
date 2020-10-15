@@ -1,5 +1,6 @@
 package com.zjy.myblog.handler;
 
+import com.zjy.myblog.exception.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -17,7 +18,7 @@ public class ControllerExceptionHandler {//自定义前端拦截器，跳转到�
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     //异常处理的注解
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(NotFoundException.class)
     public ModelAndView exceptionHandler(HttpServletRequest request, Exception e) throws Exception {
         //将异常写入日志
         logger.error("Request URL:{},Exception:{}", request.getRequestURI(), e);
